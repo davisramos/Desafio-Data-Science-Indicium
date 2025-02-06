@@ -9,9 +9,9 @@ Antes de executar o projeto, é necessário instalar as dependências listadas n
 ## Instalação
 Clone este repositório:
 
-git clone <URL_DO_REPOSITORIO>
+git clone <https://github.com/davisramos/Desafio-Data-Science-Indicium.git>
 
-cd <NOME_DO_REPOSITORIO>
+cd <Desafio-Data-Science-Indicium>
 
 Crie um ambiente virtual:
 
