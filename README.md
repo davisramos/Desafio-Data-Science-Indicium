@@ -45,7 +45,6 @@ import pandas as pd
 import numpy as np
 
 with open('modelprices.pkl', 'rb') as file:
-    
     mod = pickle.load(file)
 
 novoap = {
