@@ -9,9 +9,9 @@ Antes de executar o projeto, é necessário instalar as dependências listadas n
 ## 2. Instalação
 ### 2.1 Clone este repositório:
 
-git clone <https://github.com/davisramos/Desafio-Data-Science-Indicium.git>
+git clone <https://github.com/davisramos/LH_CD_DAVISPECK.git>
 
-cd <Desafio-Data-Science-Indicium>
+cd <LH_CD_DAVISPECK>
 
 
 ### 2.2 Crie um ambiente virtual:
