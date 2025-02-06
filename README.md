@@ -13,15 +13,18 @@ git clone <https://github.com/davisramos/Desafio-Data-Science-Indicium.git>
 
 cd <Desafio-Data-Science-Indicium>
 
+
 Crie um ambiente virtual:
 
 python -m venv venv
 
 source venv/Scripts/activate  # No Mac use: venv\bin\activate
 
+
 Instale as dependências:
 
 pip install -r requirements.txt
+
 
 ## Execução
 
