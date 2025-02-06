@@ -34,5 +34,46 @@ jupyter notebook
 
 Navegue até o arquivo do projeto e execute-o.
 
+## 4. Rodando o modelo
+
+Para rodar o modelo, execute as seguintes linhas em um notebook no mesmo diretório do arquivo modelprice.pkl, sendo as informações contidas em novoap as desejadas para previsão:
+
+import pickle
+
+import pandas as pd
+
+import numpy as np
+
+with open('modelprices.pkl', 'rb') as file:
+    
+    mod = pickle.load(file)
+
+novoap = {
+   
+    'bairro_group': 'Manhattan',
+    
+    'latitude': 40.75362,
+    
+    'longitude': -73.98377,
+    
+    'room_type': 'Entire home/apt'
+
+}
+
+df_novo_apartamento = pd.DataFrame([novoap])
+
+df_novo_apartamento = pd.get_dummies(df_novo_apartamento, columns=['bairro_group', 'room_type'], drop_first=True)
+
+colunas_faltantes = set(mod.feature_names_in_) - set(df_novo_apartamento.columns)
+
+for coluna in colunas_faltantes:
+
+    df_novo_apartamento[coluna] = 0
+
+df_novo_apartamento = df_novo_apartamento[mod.feature_names_in_]
+
+preco_previsto = mod.predict(df_novo_apartamento)
+
+print(f'Sugestão de preço: ${preco_previsto[0]:.2f}')
 
 
